@@ -1,0 +1,56 @@
+.newletter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url(/banner/b14.png);
+  background-position: 20% 30%;
+  background-repeat: no-repeat;
+  background-color: #041e42;
+}
+.newletter h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+.newletter p {
+  font-style: 14px;
+  font-weight: 600;
+  color: #818ea0;
+}
+.newletter span {
+  color: #36bfff;
+}
+.newletter .form {
+  display: flex;
+  width: 35%;
+}
+.newletter input {
+  height: 3.125rem;
+  padding: 0 1.25em;
+
+  font-style: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.newletter button {
+  background-color: #36bfff;
+  white-space: nowrap;
+  height: 3.125rem;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .newletter .form {
+    width: 70%;
+  }
+  .newletter input {
+    min-width: 150px;
+  }
+}

@@ -1,0 +1,13 @@
+<div class="body">
+  <div class="form-container">
+    <form (ngSubmit)="addpro()" [formGroup]="appProductForm">
+      name : <input type="text" formControlName="name" /><br />
+      desc : <input type="text" formControlName="desc" /><br />
+      price : <input type="text" formControlName="price" /><br />
+      category : <input type="text" formControlName="category" /><br />
+      image : <input type="file" (change)="onFileChange($event)" /><br />
+      <input type="submit" class="btn btn-outline-info" />
+    </form>
+  </div>
+</div>
+

@@ -1,0 +1,64 @@
+.features {
+  padding: 40px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.features .feBox {
+  width: 180px;
+  min-width: 160px;
+  text-align: center;
+  padding: 25px 15px;
+  margin: 15px 30px;
+  box-shadow: 10px 10px 34px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f5efe7;
+  border-radius: 4px;
+  box-sizing: content-box;
+  transition: 0.2s;
+  z-index: -111;
+}
+.features .feBox:hover {
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.25);
+}
+.features .feBox img {
+  width: 100%;
+}
+.features .feBox p {
+  padding: 9px 8px 6px 8px;
+  margin-bottom: 0;
+  line-height: 1;
+  border-radius: 4px;
+  color: #222;
+  background-color: #cdf1ff;
+}
+.features .feBox:nth-child(2) p {
+  background-color: #ffcdff;
+}
+.features .feBox:nth-child(3) p {
+  background-color: #e5ffcd;
+}
+.features .feBox:nth-child(4) p {
+  background-color: #cdf8ff;
+}
+.features .feBox:nth-child(5) p {
+  background-color: #e4cdff;
+}
+.features .feBox:nth-child(6) p {
+  background-color: #ffe4cd;
+}
+
+@media screen and (max-width: 768px) {
+  .features {
+    padding: 40px 30px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  .features .feBox {
+    width: 139px;
+    min-width: 120px;
+    margin: 15px 15px;
+  }
+}
