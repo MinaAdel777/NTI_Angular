@@ -27,6 +27,7 @@ import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddproductComponent } from './methods/addproduct/addproduct.component';
 import { AddusertypeComponent } from './methods/addusertype/addusertype.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,10 @@ import { AddusertypeComponent } from './methods/addusertype/addusertype.componen
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [provideHttpClient()],
+  providers: [
+    provideHttpClient(),
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
