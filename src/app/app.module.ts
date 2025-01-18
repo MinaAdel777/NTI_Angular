@@ -21,7 +21,6 @@ import { SmBannerComponent } from './parts/sm-banner/sm-banner.component';
 import { ProductsComponent } from './parts/products/products.component';
 import { BannerComponent } from './parts/banner/banner.component';
 import { FeaturesComponent } from './parts/features/features.component';
-import { TopBodyComponent } from './parts/top-body/top-body.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PaginationComponent } from './parts/pagination/pagination.component';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
@@ -50,7 +49,6 @@ import { AddusertypeComponent } from './methods/addusertype/addusertype.componen
     ProductsComponent,
     BannerComponent,
     FeaturesComponent,
-    TopBodyComponent,
     NotFoundComponent,
     PaginationComponent,
     AddproductComponent,
