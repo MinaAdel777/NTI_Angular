@@ -1,0 +1,37 @@
+<section class="products">
+  <h2 *ngIf="!hideContent && isPage('/home')">Featured Products</h2>
+  <h2 *ngIf="!hideContent2 && isPage('/home')">New Arrivals</h2>
+  <p *ngIf="isPage('/home')">Summer Collection New Modern Design</p>
+
+  <div class="proContainer">
+    <ng-container
+      *ngFor="
+        let product of showFirstArray ? displayedProducts : randomProducts
+      "
+    >
+      <div class="pro">
+        <img
+          [src]="staticURL + product.imageURL"
+          (click)="goToProductDetails(product.id)"
+        />
+        <div class="des">
+          <span>{{ product.name | titlecase }}</span>
+          <h5 *ngIf="isPage('/home')">{{ product.category | titlecase }}</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="productcart">
+          <h4>{{ product.price | currency }}</h4>
+          <button (click)="addToCart(product)">
+            <span>Add To Cart </span><i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</section>

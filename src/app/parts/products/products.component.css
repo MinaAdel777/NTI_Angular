@@ -1,0 +1,132 @@
+.products {
+  padding: 40px 50px;
+  text-align: center;
+  padding-top: 60px;
+}
+.products .proContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.products .pro {
+  display: block;
+  align-content: end;
+  position: relative;
+  max-width: 420px;
+  min-width: 320px;
+  padding: 10px 12px;
+  flex: 1; /* Adjusts size based on available space */
+  margin: 15px 30px;
+  border: 2px solid #f5efe7;
+  border-radius: 20px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+}
+
+.products .pro:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+}
+.products .pro img {
+  width: 95%;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.products .pro .des {
+  text-align: start;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.products .pro .des span {
+  color: #36bfff;
+  font-size: 12px;
+  font-weight: bold;
+}
+.products .pro .des h5 {
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: bold;
+}
+.products .pro .des i {
+  font-size: 12px;
+  color: #e4a906;
+}
+.products .pro .des h4 {
+  padding-top: 7px;
+  font-size: 15px;
+  color: #222;
+}
+.productcart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  right: 10px;
+  height: 50px;
+
+  color: #222;
+}
+.productcart h4 {
+  margin: 0;
+}
+
+.productcart button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  width: 150px;
+  height: 50px;
+  color: #222;
+  background-color: #36bfff75;
+  border: transparent;
+  border-radius: 10px;
+}
+
+.productcart button i {
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .products {
+    padding: 40px 30px;
+  }
+
+  .productcart span {
+    display: none;
+  }
+  .products .proContainer .pro .productcart button {
+    width: 50px;
+  }
+  .products .pro {
+    min-width: 200px;
+    margin: 15px 10px;
+    padding: 5px 8px;
+    /* width: 30%; */
+  }
+  .products .pro img {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .products .pro {
+    width: 60%;
+    min-width: 160px;
+  }
+
+  .products .pro img {
+    height: 190px;
+  }
+  .productcart h4 {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,47 @@
+.prodetails {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.prodetails .single-p-img {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  margin-right: 50px;
+}
+
+.prodetails img {
+}
+
+.prodetails .single-pro-details {
+  width: 50%;
+  padding: 25px 0;
+}
+.prodetails .single-pro-details h4 {
+  padding: 40px 0 20px 0;
+}
+.prodetails .single-pro-details h2 {
+  font-size: 26px;
+}
+.prodetails .single-pro-details select {
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+.prodetails .single-pro-details input {
+  width: 55px;
+  height: 47px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.prodetails .single-pro-details input:focus {
+  outline: none;
+}
+.prodetails .single-pro-details button {
+  background-color: #36bfff;
+  color: #222;
+}
+.prodetails .single-pro-details span {
+  line-height: 25px;
+}

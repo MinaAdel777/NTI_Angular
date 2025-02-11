@@ -1,0 +1,165 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 80px;
+  background: #36bfff;
+  box-shadow: 0 10px 15px rgba(255, 255, 255, 0.222);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.logbtn {
+  border: transparent;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+.logbtn:hover {
+  color: #f5efe7;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px 0 0;
+}
+
+.navbar li {
+  list-style: none;
+  padding: 3px 20px;
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+  color: #f5efe7;
+}
+.navbar li a.active::after,
+.navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #f5efe7;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+.rightbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rightbar i {
+  color: #222;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+.rightbar i:hover,
+.rightbar i.active {
+  color: #f5efe7;
+}
+
+.menubar {
+  display: none;
+  margin-right: 30px;
+  background-color: transparent;
+  border: transparent;
+}
+
+.close {
+  display: none;
+  background-color: transparent;
+  border: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 15px 30px;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    position: fixed;
+    top: 0px;
+    right: -320px;
+    height: 100vh;
+    width: 300px;
+    background-color: #36bfff;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.3);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+  .navbar.active {
+    right: 0;
+  }
+  .navbar li {
+    margin-bottom: 25px;
+  }
+  .rightbar i {
+    font-size: 16px;
+  }
+  .menubar {
+    display: flex;
+  }
+  .close {
+    display: initial;
+    position: absolute;
+    top: 12px;
+    right: 78px;
+    color: #222;
+    font-size: 24px;
+  }
+  .close i {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 60px;
+    right: -500px;
+    height: 40vh;
+    width: 100%;
+    padding: 50px 0 0 0;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  }
+  .navbar.active {
+    right: 0;
+  }
+  .menubar.active {
+    transition: 1s;
+
+    display: none;
+  }
+  .close {
+    display: none;
+    position: fixed;
+    top: 12px;
+    right: 78px;
+    color: #222;
+    font-size: 24px;
+  }
+  .close.active {
+    display: initial;
+  }
+}

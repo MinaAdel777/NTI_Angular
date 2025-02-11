@@ -1,0 +1,91 @@
+.smBanner {
+  padding: 40px 60px;
+}
+.smBanner div {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.smBanner .bannerBox {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: top;
+  min-width: 350px;
+  height: 45vh;
+  padding-left: 50px;
+  margin: 20px;
+  box-sizing: border-box;
+}
+.smBanner .bannerBox h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+}
+.smBanner .bannerBox h2 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.smBanner .bannerBox p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+.smBanner .bottombanner {
+  height: 33vh;
+  padding: 15px 0 15px 30px;
+}
+.smBanner .bottombanner h2 {
+  font-size: 23px;
+  font-weight: 900;
+}
+.smBanner .bottombanner h3 {
+  font-size: 18px;
+  color: #ec533e;
+  font-weight: 800;
+}
+
+.smBanner .bottombanner button {
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+}
+
+.smBanner .bannerBox:nth-child(1) {
+  background-image: url("/banner/b0.jpg");
+}
+.smBanner .bannerBox:nth-child(2) {
+  background-image: url(/banner/b1.jpg);
+}
+.smBanner .bottombanner:nth-child(1) {
+  background-image: url(/banner/b7.jpg);
+}
+.smBanner .bottombanner:nth-child(2) {
+  background-image: url(/banner/b4.jpg);
+}
+.smBanner .bottombanner:nth-child(3) {
+  background-image: url(/banner/b10.jpg);
+}
+
+@media screen and (max-width: 768px) {
+  .smBanner {
+    padding: 30px 10px;
+  }
+  .smBanner .bannerBox {
+    height: 35vh;
+    padding-left: 20px;
+    min-width: 270px;
+    margin: 15px 20px;
+  }
+  .smBanner .bottombanner {
+    height: 25vh;
+    padding: 15px 0 15px 20px;
+  }
+}

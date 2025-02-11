@@ -1,0 +1,71 @@
+<section class="topBody-pages , TopBcart">
+  <h2>#Cart</h2>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+</section>
+
+<section class="cart" id="p1">
+  <table width="100%">
+    <thead>
+      <tr>
+        <td>Remove</td>
+        <td>Image</td>
+        <td>Product</td>
+        <td>Price</td>
+        <td>Quantity</td>
+        <td>Subtotal</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cartItems; let i = index">
+        <td>
+          <button (click)="removeItem(i)">
+            <i class="far fa-times-circle"></i>
+          </button>
+        </td>
+        <td class="box"><img [src]="staticURL + item.imageURL" /></td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.price | currency }}</td>
+        <td>
+          <input
+            type="number"
+            [(ngModel)]="item.quantity"
+            (change)="calculateTotal()"
+            min="1"
+          />
+        </td>
+        <td>{{ item.price * item.quantity | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="cart-add">
+  <div class="coupon">
+    <h3>Apply Coupon</h3>
+    <div class="couponbtn">
+      <input type="text" placeholder="Enter Coupon Code" />
+      <button class="normal">Apply</button>
+    </div>
+  </div>
+
+  <div class="subtotal">
+    <h3>Cart Totals</h3>
+    <table>
+      <tr>
+        <td>Subtotal</td>
+        <td>{{ totalPrice | currency }}</td>
+      </tr>
+      <tr>
+        <td>Shipping</td>
+        <td>Free</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td>
+          <strong>{{ totalPrice | currency }}</strong>
+        </td>
+      </tr>
+    </table>
+    <button class="normal"><span>Proceed to checkout</span></button>
+  </div>
+</section>

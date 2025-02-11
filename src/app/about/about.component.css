@@ -1,0 +1,55 @@
+.TopBabout {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+    url(/banner/aboutus3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.about-head {
+  display: flex;
+  align-items: center;
+}
+.about-head div {
+  padding-left: 40px;
+}
+.about-head img {
+  width: 50%;
+  height: auto;
+}
+.about-app {
+  text-align: center;
+}
+.about-app a {
+  text-decoration: none;
+}
+.about-app .video {
+  width: 70%;
+  height: 100%;
+  margin: 30px auto 10px auto;
+}
+.about-app .video video {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+@media screen and (max-width: 768px) {
+  .about-head {
+    flex-direction: column;
+  }
+  .about-head img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .about-head div {
+    padding-left: 0;
+  }
+  .about-app .video {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 466px) {
+  .about-head img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

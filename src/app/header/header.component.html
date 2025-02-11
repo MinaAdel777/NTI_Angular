@@ -1,0 +1,92 @@
+<section class="header">
+  <a routerLink="home"> <img src="logo.svg" class="logo" /> </a>
+
+  <div class="rightbar">
+    <ul class="navbar" [class.active]="isNavbarActive">
+      <li>
+        <a routerLink="home" routerLinkActive="active" (click)="closeNavbar()"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="menshop"
+          routerLinkActive="active"
+          (click)="closeNavbar()"
+          >MEN</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="womenshop"
+          routerLinkActive="active"
+          (click)="closeNavbar()"
+          >WOMEN</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="kidsshop"
+          routerLinkActive="active"
+          (click)="closeNavbar()"
+          >KIDS</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="aboutus"
+          routerLinkActive="active"
+          (click)="closeNavbar()"
+          >About</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="contact"
+          routerLinkActive="active"
+          (click)="closeNavbar()"
+          >Contact</a
+        >
+      </li>
+      <li>
+        <button
+          routerLink="login"
+          routerLinkActive="activeLink"
+          *ngIf="!isLoggedIn"
+          class="logbtn"
+        >
+          Login
+        </button>
+      </li>
+      <li>
+        <button
+          routerLink="signup"
+          routerLinkActive="activeLink"
+          *ngIf="!isLoggedIn"
+          class="logbtn"
+        >
+          Sign Up
+        </button>
+        <button *ngIf="isLoggedIn" (click)="logout()" class="logbtn">
+          Logout
+        </button>
+      </li>
+      <button
+        class="close"
+        (click)="closeNavbar()"
+        [class.active]="isNavbarActive"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+    </ul>
+
+    <button class="menubar" (click)="menubar()" [class.active]="isNavbarActive">
+      <i class="fas fa-outdent , bar"></i>
+    </button>
+
+    <a routerLink="cart">
+      <i routerLinkActive="active" class="fa-solid fa-cart-shopping fa-bounce">
+      </i>
+    </a>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+<section class="prodetails" id="p1">
+  <div class="single-p-img">
+    <img [src]="staticURL + product.imageURL" width="100%" />
+  </div>
+
+  <div class="single-pro-details">
+    <h6>{{ product.name | titlecase }}</h6>
+    <h4>{{ product.category | titlecase }}</h4>
+    <h2>{{ product.price | currency }}</h2>
+    <select>
+      <option>Select Size</option>
+      <option>Small</option>
+      <option>Large Size</option>
+      <option>XL</option>
+      <option>2XL</option>
+      <option>3XL</option>
+    </select>
+    <input type="number" value="1" />
+    <button class="normal">Add To Cart</button>
+    <h4>Product Details</h4>
+    <span> {{ product.desc }}</span>
+  </div>
+</section>
+
+<app-products></app-products>
+
+<app-new-letter></app-new-letter>
