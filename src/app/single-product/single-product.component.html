@@ -1,6 +1,8 @@
 <section class="prodetails" id="p1">
   <div class="single-p-img">
-    <img [src]="staticURL + product.imageURL" width="100%" />
+    <h6>{{ product.name | titlecase }}</h6>
+
+    <img [src]="staticURL + product.imageURL" />
   </div>
 
   <div class="single-pro-details">
@@ -16,7 +18,7 @@
       <option>3XL</option>
     </select>
     <input type="number" value="1" />
-    <button class="normal">Add To Cart</button>
+    <button class="normal" (click)="addToCart(product)">Add To Cart</button>
     <h4>Product Details</h4>
     <span> {{ product.desc }}</span>
   </div>

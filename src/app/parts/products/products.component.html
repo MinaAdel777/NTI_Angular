@@ -12,7 +12,7 @@
       <div class="pro">
         <img
           [src]="staticURL + product.imageURL"
-          (click)="goToProductDetails(product.id)"
+          (click)="goToProductDetails(product._id)"
         />
         <div class="des">
           <span>{{ product.name | titlecase }}</span>

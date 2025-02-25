@@ -25,7 +25,7 @@ export class AuthoService {
   login(loginData: { email: string; password: string }): Observable<any> {
     return this._http
       .post<{ accessToken: string }>(
-        'http://localhost:3000/user/login',
+        'http://localhost:3000/users/login',
         loginData
       )
       .pipe(

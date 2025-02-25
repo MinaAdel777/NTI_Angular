@@ -26,7 +26,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    data: { title: '.Shop - Home' },
+    data: { title: 'Shop - Home' },
   },
 
   {
@@ -37,47 +37,47 @@ const routes: Routes = [
   {
     path: 'womenshop',
     component: WomenShopComponent,
-    data: { title: '.Shop - Women' },
+    data: { title: 'Shop - Women' },
   },
   {
     path: 'kidsshop',
     component: KidsShopComponent,
-    data: { title: '.Shop - Kids' },
+    data: { title: 'Shop - Kids' },
   },
   {
     path: 'contact',
     component: ContactComponent,
-    data: { title: '.Shop - Contact' },
+    data: { title: 'Shop - Contact' },
   },
   {
     path: 'aboutus',
     component: AboutComponent,
-    data: { title: '.Shop - AboutUs' },
+    data: { title: 'Shop - AboutUs' },
   },
   { path: 'cart', component: CartComponent, data: { title: '.Shop - Cart' } },
 
   {
     path: 'productdetails/:id',
     component: SingleProductComponent,
-    data: { title: '.Shop - details' },
+    data: { title: 'Shop - details' },
   },
 
   {
     path: 'login',
     component: LoginComponent,
-    data: { title: '.Shop - Login' },
+    data: { title: 'Shop - Login' },
   },
   {
     path: 'signup',
     component: SignupComponent,
-    data: { title: '.Shop - Signup' },
+    data: { title: 'Shop - Signup' },
   },
 
   {
     path: 'dashboard',
     component: DashboardComponent,
     canActivate: [authGuard],
-    data: { title: '.Shop - Dashboard' },
+    data: { title: 'Shop - Dashboard' },
   },
 
   {

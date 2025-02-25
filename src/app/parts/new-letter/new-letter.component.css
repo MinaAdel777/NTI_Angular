@@ -54,3 +54,21 @@
     min-width: 150px;
   }
 }
+@media screen and (max-width: 470px) {
+  .newletter h4 {
+    font-size: 18px;
+  }
+  .newletter p {
+    font-size: 12px;
+  }
+  .newletter input {
+    height: 2.5rem;
+  }
+  .newletter button {
+    height: 2.5rem;
+    padding: 10px 20px;
+  }
+  .newletter .form {
+    width: 100%;
+  }
+}

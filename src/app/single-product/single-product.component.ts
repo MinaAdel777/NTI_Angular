@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../services/product.service';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-single-product',
@@ -15,19 +16,25 @@ export class SingleProductComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private _cartService: CartService
   ) {}
 
   ngOnInit(): void {
-    const productId = this.route.snapshot.params['id'];
+    this.route.paramMap.subscribe((params) => {
+      const productId: any = params.get('id'); // get product id from URL
+      this.getProduct(productId); // fetch new product details
+    });
+  }
 
-    this.productService.getProductById(productId).subscribe(
-      (data) => {
-        this.product = data;
-      },
-      (error) => {
-        console.error('Error fetching product details:', error);
-      }
-    );
+  getProduct(id: number): void {
+    this.productService.getProductById(id).subscribe((data) => {
+      this.product = data;
+    });
+  }
+
+  addToCart(product: any): void {
+    this._cartService.addToCart(product);
+    alert(`Successfully added ${product.name} to Cart`);
   }
 }

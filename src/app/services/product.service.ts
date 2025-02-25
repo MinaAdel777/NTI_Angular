@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class ProductService {
   constructor(private http: HttpClient) {}
 
-  productURL = 'http://localhost:3000/product'; // Replace with your API URL
+  productURL = 'http://localhost:3000/products'; // Replace with your API URL
 
   // Fetch products from the API
   getProducts(): Observable<any[]> {

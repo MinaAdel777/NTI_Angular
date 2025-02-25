@@ -9,7 +9,7 @@ import { Token } from '@angular/compiler';
 })
 export class UserService {
   constructor(private _http: HttpClient, private _authS: AuthoService) {}
-  apiURL = 'http://localhost:3000/usertype';
+  apiURL = 'http://localhost:3000/usertypes';
 
   addUserType(data: any): Observable<any> {
     let token = '';
