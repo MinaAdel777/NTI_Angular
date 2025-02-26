@@ -11,15 +11,15 @@ export class AuthoService {
     string | null
   >(null);
 
+  get token(): Observable<string | null> {
+    return this.tokenSubject.asObservable();
+  }
+
   constructor(private _http: HttpClient) {
     const token = localStorage.getItem('accessToken');
     if (token) {
       this.tokenSubject.next(token);
     }
-  }
-
-  get token(): Observable<string | null> {
-    return this.tokenSubject.asObservable();
   }
 
   login(loginData: { email: string; password: string }): Observable<any> {

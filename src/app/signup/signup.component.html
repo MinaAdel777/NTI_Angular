@@ -1,83 +1,130 @@
 <div class="body">
-    <div class="form-container">
-        <h2>Join US</h2>
-      <form action="#" method="post" (ngSubmit)="postData(myForm)" #myForm="ngForm">
-  
-        <!-- Text Input -->
-        <div class="form-group">
-          <label for="text">Username</label>
-          <input type="text" placeholder="Username" name="username" required ngModel #username="ngModel">
-          <div class="msg" *ngIf="username.invalid && username.touched">
-            *Username is required
-          </div>
-          
+  <div class="form-container">
+    <h2>Join US</h2>
+    <form
+      action="#"
+      method="post"
+      (ngSubmit)="postData(myForm)"
+      #myForm="ngForm"
+    >
+      <!-- Text Input -->
+      <div class="form-group">
+        <label for="text">Username</label>
+        <input
+          type="text"
+          placeholder="Username"
+          name="username"
+          required
+          ngModel
+          #username="ngModel"
+        />
+        <div class="msg" *ngIf="username.invalid && username.touched">
+          *Username is required
         </div>
-  
-        <!-- Password Input -->
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" required placeholder="Enter password" name="password" ngModel #password="ngModel">
-          <div class="msg" *ngIf="password.invalid && password.touched">
-            <span >*Password must be at least 8 characters long</span>
-          </div>
+      </div>
+
+      <!-- Password Input -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          required
+          placeholder="Enter password"
+          name="password"
+          ngModel
+          #password="ngModel"
+        />
+        <div class="msg" *ngIf="password.invalid && password.touched">
+          <span>*Password must be at least 8 characters long</span>
         </div>
-  
-        <!-- Re-type Password Input -->
-        <div class="form-group">
-          <label for="password">Re-type Password</label>
-          <input type="password" placeholder="Re-type Password" name="retypePassword" ngModel required #retypePassword="ngModel" [pattern]="password.value">
-          <div class="msg" *ngIf="retypePassword.invalid && retypePassword.touched">
-            <span *ngIf="retypePassword.errors?.['required']">*Password is required</span>
-            <span *ngIf="retypePassword.errors?.['pattern']">*Passwords do not match</span>
-  
-          </div>
+      </div>
+
+      <!-- Re-type Password Input -->
+      <div class="form-group">
+        <label for="password">Re-type Password</label>
+        <input
+          type="password"
+          placeholder="Re-type Password"
+          name="retypePassword"
+          ngModel
+          required
+          #retypePassword="ngModel"
+          [pattern]="password.value"
+        />
+        <div
+          class="msg"
+          *ngIf="retypePassword.invalid && retypePassword.touched"
+        >
+          <span *ngIf="retypePassword.errors?.['required']"
+            >*Password is required</span
+          >
+          <span *ngIf="retypePassword.errors?.['pattern']"
+            >*Passwords do not match</span
+          >
         </div>
-  
-        <!-- Email Input -->
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" placeholder="Enter email" name="email" ngModel required #email="ngModel" email>
-          <div class="msg" *ngIf="email.invalid && email.touched">
-            <span *ngIf="email.errors?.['required']">*Email is required</span>
-            <span *ngIf="email.errors?.['email']">*Invalid email format</span>
-          </div>
+      </div>
+
+      <!-- Email Input -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          placeholder="Enter email"
+          name="email"
+          ngModel
+          required
+          #email="ngModel"
+          email
+        />
+        <div class="msg" *ngIf="email.invalid && email.touched">
+          <span *ngIf="email.errors?.['required']">*Email is required</span>
+          <span *ngIf="email.errors?.['email']">*Invalid email format</span>
         </div>
-  
-     
-  
-        <!-- Date Input -->
-        <div class="form-group">
-          <label for="date">Birth Date</label>
-          <input type="date" name="birthDate" ngModel>
-        </div>
-  
- 
-        <!-- Radio Buttons -->
-        <div class="form-group">
-          <label>Gender</label>
-          <div class="flex">
+      </div>
+
+      <!-- Date Input -->
+      <div class="form-group">
+        <label for="date">Birth Date</label>
+        <input type="date" name="birthDate" ngModel />
+      </div>
+
+      <!-- Radio Buttons -->
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="flex">
           <div class="form-group-inline">
-            <input type="radio" id="radio2" name="gender" value="male" ngModel>
+            <input
+              type="radio"
+              id="radio2"
+              name="gender"
+              value="male"
+              ngModel
+            />
             <label for="radio2">Male</label>
           </div>
           <div class="form-group-inline">
-            <input type="radio" id="radio1" name="gender" value="female" ngModel>
+            <input
+              type="radio"
+              id="radio1"
+              name="gender"
+              value="female"
+              ngModel
+            />
             <label for="radio1">Female</label>
           </div>
         </div>
-        </div>
-  
- 
-        <!-- Checkbox -->
-        <div class="form-group-inline">
-          <input type="checkbox" id="terms" name="terms" ngModel>
-          <label for="terms">Agree to terms and conditions</label>
-        </div>
-  
-        <!-- Submit Button -->
-        <div class="form-group text-center">
-          <input type="submit" value="Join Us" />
-        </div>
-      </form>
-    </div>
+      </div>
+
+      <!-- Checkbox -->
+      <div class="form-group-inline">
+        <input type="checkbox" id="terms" name="terms" ngModel />
+        <label for="terms">Agree to terms and conditions</label>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group text-center">
+        <input type="submit" value="Join Us" [disabled]="myForm.invalid" />
+      </div>
+    </form>
   </div>
+</div>

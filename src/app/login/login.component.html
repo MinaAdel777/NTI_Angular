@@ -13,6 +13,8 @@
           placeholder="Enter email"
           name="email"
           ngModel
+          required
+          email
         />
         <small>We'll never share your email with anyone else.</small>
       </div>
@@ -26,10 +28,17 @@
           id="exampleInputPassword1"
           placeholder="Password"
           ngModel
+          required
         />
       </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button
+        type="submit"
+        [disabled]="loginForm.invalid"
+        class="btn btn-primary"
+      >
+        Login
+      </button>
 
       <div class="form-group">
         <label

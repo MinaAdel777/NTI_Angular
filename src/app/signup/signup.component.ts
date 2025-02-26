@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
 })
 export class SignupComponent {
   change(form: NgForm) {
-    form.form.patchValue({ email: 'ali@ali.com' });
+    form.form.patchValue({ email: 'mina@mina.com' });
     console.log(form.value);
   }
 
